@@ -19,6 +19,8 @@ import {
   updateEquipamento,
   deleteEquipamento,
   registrarMovimentacaoDB,
+  getMovimentacoes,
+  getUsuarios,
 } from '../database/database';
 import {
   authenticateBiometrics,
@@ -56,6 +58,8 @@ export default function EquipmentScreen({
   const [responsavel, setResponsavel] = useState('');
   const [observacao, setObservacao] = useState('');
   const [fotoVistoria, setFotoVistoria] = useState(null);
+  const [listaUsuarios, setListaUsuarios] = useState([]);
+  const [usuarioSelecionadoId, setUsuarioSelecionadoId] = useState(null);
 
   const carregarEquipamentos = () => {
     const dados = getEquipamentos(busca, filtroStatus);
@@ -172,15 +176,19 @@ export default function EquipmentScreen({
   // ==========================================================================
   // OPERAÇÕES DE MOVIMENTAÇÃO (EMPRÉSTIMO, DEVOLUÇÃO, MANUTENÇÃO)
   // ==========================================================================
-  const abrirModalMovimentacao = (item) => {
-    refreshGps();
-    setEquipamentoAlvo(item);
-    setTipoMov(item.status === 'DISPONIVEL' ? 'EMPRESTIMO' : 'DEVOLUCAO');
-    setResponsavel(item.responsavel_atual || '');
-    setObservacao('');
-    setFotoVistoria(null);
-    setMovModalVisible(true);
-  };
+    const abrirModalMovimentacao = (item) => {
+        refreshGps();
+        const usuariosDoBanco = getUsuarios();
+        setListaUsuarios(usuariosDoBanco);
+        setUsuarioSelecionadoId(null);
+
+        setEquipamentoAlvo(item);
+        setTipoMov(item.status === 'DISPONIVEL' ? 'EMPRESTIMO' : 'DEVOLUCAO');
+        setResponsavel(item.responsavel_atual || '');
+        setObservacao('');
+        setFotoVistoria(null);
+        setMovModalVisible(true);
+    };
 
   const salvarMovimentacaoSQLite = async () => {
     if (tipoMov === 'EMPRESTIMO' && !responsavel.trim()) {
@@ -192,15 +200,16 @@ export default function EquipmentScreen({
     const autorizado = await authenticateBiometrics('Confirmar assinatura biométrica da movimentação');
     if (!autorizado) return;
 
-    registrarMovimentacaoDB({
-      equipamento_id: equipamentoAlvo.id,
-      tipo: tipoMov,
-      responsavel,
-      observacao,
-      latitude: gpsData.latitude,
-      longitude: gpsData.longitude,
-      foto_vistoria_uri: fotoVistoria,
-    });
+      registrarMovimentacaoDB({
+          equipamento_id: equipamentoAlvo.id,
+          usuario_id: usuarioSelecionadoId,
+          tipo: tipoMov,
+          responsavel,
+          observacao,
+          latitude: gpsData.latitude,
+          longitude: gpsData.longitude,
+          foto_vistoria_uri: fotoVistoria,
+      });
 
     setMovModalVisible(false);
     carregarEquipamentos();
@@ -395,18 +404,72 @@ export default function EquipmentScreen({
                 ))}
               </View>
 
-              {tipoMov !== 'DEVOLUCAO' && (
-                <>
-                  <Text style={globalStyles.inputLabel}>Responsável (Nome / RA)</Text>
-                  <TextInput
-                    style={globalStyles.input}
-                    value={responsavel}
-                    onChangeText={setResponsavel}
-                    placeholder="Ex: Edilson Alves - RA 114093"
-                    placeholderTextColor={COLORS.textMuted}
-                  />
-                </>
-              )}
+    {tipoMov !== 'DEVOLUCAO' && (
+        <>
+            <Text style={globalStyles.inputLabel}>
+                Selecionar Usuário Cadastrado (Tabela Usuarios)
+            </Text>
+            <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                style={styles.userSelectScroll}
+            >
+                {listaUsuarios.map((u) => {
+                    const selecionado = usuarioSelecionadoId === u.id;
+                    return (
+                        <TouchableOpacity
+                            key={u.id}
+                            style={[
+                                styles.userSelectCard,
+                                selecionado && styles.userSelectCardActive,
+                            ]}
+                            onPress={() => {
+                                triggerHapticSelection();
+                                setUsuarioSelecionadoId(u.id);
+                                setResponsavel(`${u.nome} (RA: ${u.ra_matricula})`);
+                            }}
+                        >
+                            <Ionicons
+                                name={u.perfil === 'TECNICO' ? 'construct' : 'person'}
+                                size={14}
+                                color={selecionado ? COLORS.bg : COLORS.primary}
+                            />
+                            <View>
+                                <Text
+                                    style={[
+                                        styles.userSelectName,
+                                        selecionado && { color: COLORS.bg },
+                                    ]}
+                                >
+                                    {u.nome}
+                                </Text>
+                                <Text
+                                    style={[
+                                        styles.userSelectRa,
+                                        selecionado && { color: COLORS.bg },
+                                    ]}
+                                >
+                                    {u.perfil} • RA: {u.ra_matricula}
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    );
+                })}
+            </ScrollView>
+
+            <Text style={globalStyles.inputLabel}>Responsável Selecionado</Text>
+            <TextInput
+                style={globalStyles.input}
+                value={responsavel}
+                onChangeText={(texto) => {
+                    setResponsavel(texto);
+                    setUsuarioSelecionadoId(null);
+                }}
+                placeholder="Selecione acima ou digite manualmente..."
+                placeholderTextColor={COLORS.textMuted}
+            />
+        </>
+    )}
 
               <Text style={globalStyles.inputLabel}>
                 {tipoMov === 'MANUTENCAO'
@@ -576,5 +639,33 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
     borderRadius: 10,
     alignItems: 'center',
-  },
+    },
+    userSelectScroll: {
+        marginBottom: 4,
+    },
+    userSelectCard: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: COLORS.bg,
+        borderWidth: 1,
+        borderColor: COLORS.border,
+        borderRadius: 10,
+        paddingHorizontal: 12,
+        paddingVertical: 8,
+        marginRight: 8,
+        gap: 8,
+    },
+    userSelectCardActive: {
+        backgroundColor: COLORS.primary,
+        borderColor: COLORS.primary,
+    },
+    userSelectName: {
+        color: COLORS.textMain,
+        fontWeight: 'bold',
+        fontSize: 12,
+    },
+    userSelectRa: {
+        color: COLORS.textSub,
+        fontSize: 10,
+    },
 });

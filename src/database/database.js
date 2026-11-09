@@ -21,6 +21,15 @@ export const initDB = () => {
       criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
+    CREATE TABLE IF NOT EXISTS usuarios (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      nome TEXT NOT NULL,
+      ra_matricula TEXT NOT NULL UNIQUE,
+      perfil TEXT NOT NULL DEFAULT 'ALUNO',
+      curso_setor TEXT NOT NULL,
+      criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
     CREATE TABLE IF NOT EXISTS movimentacoes (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       equipamento_id INTEGER NOT NULL,
@@ -185,6 +194,55 @@ export const updateEquipamento = ({ id, codigo_qr, nome, categoria, bancada_sala
 
 export const deleteEquipamento = (id) => {
   return db.runSync('DELETE FROM equipamentos WHERE id = ?;', [id]);
+};
+
+// ============================================================================
+// CONSULTAS E OPERAÇÕES DO CRUD DE USUÁRIOS (ALUNOS / TÉCNICOS)
+// ============================================================================
+
+export const getUsuarios = (busca = '', filtroPerfil = 'TODOS') => {
+    let query = 'SELECT * FROM usuarios WHERE 1=1';
+    const params = [];
+
+    if (filtroPerfil !== 'TODOS') {
+        query += ' AND perfil = ?';
+        params.push(filtroPerfil);
+    }
+
+    if (busca.trim() !== '') {
+        query += ' AND (nome LIKE ? OR ra_matricula LIKE ? OR curso_setor LIKE ?)';
+        const term = `%${busca.trim()}%`;
+        params.push(term, term, term);
+    }
+
+    query += ' ORDER BY nome ASC;';
+    return db.getAllSync(query, params);
+};
+
+export const insertUsuario = ({ nome, ra_matricula, perfil, curso_setor }) => {
+    return db.runSync(
+        `INSERT INTO usuarios (nome, ra_matricula, perfil, curso_setor)
+     VALUES (?, ?, ?, ?);`,
+        [
+            nome.trim(),
+            ra_matricula.trim(),
+            perfil || 'ALUNO',
+            curso_setor.trim() || 'Engenharia de Computação',
+        ]
+    );
+};
+
+export const updateUsuario = ({ id, nome, ra_matricula, perfil, curso_setor }) => {
+    return db.runSync(
+        `UPDATE usuarios
+     SET nome = ?, ra_matricula = ?, perfil = ?, curso_setor = ?
+     WHERE id = ?;`,
+        [nome.trim(), ra_matricula.trim(), perfil, curso_setor.trim(), id]
+    );
+};
+
+export const deleteUsuario = (id) => {
+    return db.runSync('DELETE FROM usuarios WHERE id = ?;', [id]);
 };
 
 // ============================================================================
