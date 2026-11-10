@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\database",
-    "\\src\\screens"
+    "\\src\\screens",
+    "\\src\\services"
   ],
-  "SelectedNode": "\\src\\screens\\UsersScreen.js",
+  "SelectedNode": "\\src\\services\\hardwareService.js",
   "PreviewInSolutionExplorer": false
 }

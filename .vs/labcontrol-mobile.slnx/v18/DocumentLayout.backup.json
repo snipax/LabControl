@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\projetos\\labcontrol-mobile\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\UsersScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\UsersScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\EquipmentScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\ScannerScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\ScannerScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\LoginScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -23,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\HistoryScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\EquipmentScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\DashboardScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\DashboardScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +66,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ScannerScreen.js",
-              "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\ScannerScreen.js",
-              "RelativeDocumentMoniker": "src\\screens\\ScannerScreen.js",
-              "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\screens\\ScannerScreen.js",
-              "RelativeToolTip": "src\\screens\\ScannerScreen.js",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAmwLwAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UsersScreen.js",
+              "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\UsersScreen.js",
+              "RelativeDocumentMoniker": "src\\screens\\UsersScreen.js",
+              "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\screens\\UsersScreen.js",
+              "RelativeToolTip": "src\\screens\\UsersScreen.js",
+              "ViewState": "AgIAAEMBAAAAAAAAAAAqwJIBAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-03T07:51:37.588Z",
+              "WhenOpened": "2026-11-09T06:05:39.037Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LoginScreen.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\LoginScreen.js",
               "RelativeDocumentMoniker": "src\\screens\\LoginScreen.js",
@@ -87,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "HistoryScreen.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\HistoryScreen.js",
               "RelativeDocumentMoniker": "src\\screens\\HistoryScreen.js",
@@ -99,19 +103,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "EquipmentScreen.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js",
               "RelativeDocumentMoniker": "src\\screens\\EquipmentScreen.js",
               "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js",
               "RelativeToolTip": "src\\screens\\EquipmentScreen.js",
-              "ViewState": "AgIAADcCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJkCAAAAAAAAAAAIwJ4CAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-03T07:33:53.743Z"
+              "WhenOpened": "2026-11-03T07:33:53.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DashboardScreen.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\DashboardScreen.js",
               "RelativeDocumentMoniker": "src\\screens\\DashboardScreen.js",
@@ -123,19 +128,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "App.js",
+              "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\App.js",
+              "RelativeDocumentMoniker": "App.js",
+              "ToolTip": "C:\\projetos\\labcontrol-mobile\\App.js",
+              "RelativeToolTip": "App.js",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAIcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-03T06:44:04.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ScannerScreen.js",
+              "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\ScannerScreen.js",
+              "RelativeDocumentMoniker": "src\\screens\\ScannerScreen.js",
+              "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\screens\\ScannerScreen.js",
+              "RelativeToolTip": "src\\screens\\ScannerScreen.js",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAmwLwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-03T07:51:37.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "database.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\database\\database.js",
               "RelativeDocumentMoniker": "src\\database\\database.js",
               "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\database\\database.js",
               "RelativeToolTip": "src\\database\\database.js",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAmwNgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-03T06:52:56.391Z"
+              "WhenOpened": "2026-11-03T06:52:56.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "app.json",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\app.json",
               "RelativeDocumentMoniker": "app.json",
@@ -148,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "index.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\index.js",
               "RelativeDocumentMoniker": "index.js",
@@ -157,19 +188,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-11-03T06:49:53.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.js",
-              "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\App.js",
-              "RelativeDocumentMoniker": "App.js",
-              "ToolTip": "C:\\projetos\\labcontrol-mobile\\App.js",
-              "RelativeToolTip": "App.js",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-03T06:44:04.079Z",
-              "EditorCaption": ""
             }
           ]
         }
