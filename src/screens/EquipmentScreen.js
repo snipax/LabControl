@@ -12,6 +12,7 @@ import {
     StyleSheet,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import QRCode from 'react-native-qrcode-svg';
 import { COLORS, globalStyles } from '../styles/theme';
 import {
     getEquipamentos,
@@ -69,6 +70,9 @@ export default function EquipmentScreen({
     const [listaUsuarios, setListaUsuarios] = useState([]);
     const [usuarioSelecionadoId, setUsuarioSelecionadoId] = useState(null);
     const [prazoOpcao, setPrazoOpcao] = useState('AULA_2H');
+    // Estados do Modal 3: Etiqueta QR Code do Equipamento
+    const [qrModalVisible, setQrModalVisible] = useState(false);
+    const [equipamentoQr, setEquipamentoQr] = useState(null);
 
     const carregarEquipamentos = () => {
         const dados = getEquipamentos(busca, filtroStatus);
@@ -123,6 +127,12 @@ export default function EquipmentScreen({
         setBancada(item.bancada_sala);
         setFotoUri(item.foto_uri);
         setCrudModalVisible(true);
+    };
+
+    const abrirModalEtiquetaQr = (item) => {
+        triggerHapticSelection();
+        setEquipamentoQr(item);
+        setQrModalVisible(true);
     };
 
     const salvarEquipamentoSQLite = () => {
@@ -338,6 +348,13 @@ export default function EquipmentScreen({
                                 >
                                     <Ionicons name="swap-horizontal" size={15} color={COLORS.bg} />
                                     <Text style={styles.movBtnText}>Movimentar</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.iconBtn}
+                                    onPress={() => abrirModalEtiquetaQr(item)}
+                                >
+                                    <Ionicons name="qr-code-outline" size={18} color={COLORS.success} />
                                 </TouchableOpacity>
 
                                 <TouchableOpacity
@@ -604,6 +621,41 @@ export default function EquipmentScreen({
                     </View>
                 </View>
             </Modal>
+            {/* MODAL 3: GERADOR DE ETIQUETA PATRIMONIAL QR CODE */}
+            <Modal visible={qrModalVisible} animationType="fade" transparent>
+                <View style={styles.qrModalBackdrop}>
+                    <View style={styles.qrModalCard}>
+                        <Text style={styles.modalTitle}>Etiqueta Patrimonial QR</Text>
+                        <Text style={styles.qrSubtitle}>
+                            Pronta para leitura óptica ou impressão de bancada
+                        </Text>
+
+                        {equipamentoQr && (
+                            <View style={styles.qrWhiteBox}>
+                                <QRCode
+                                    value={equipamentoQr.codigo_qr}
+                                    size={190}
+                                    color="#000000"
+                                    backgroundColor="#FFFFFF"
+                                />
+                                <Text style={styles.qrTagCode}>{equipamentoQr.codigo_qr}</Text>
+                                <Text style={styles.qrEquipName} numberOfLines={2}>
+                                    {equipamentoQr.nome}
+                                </Text>
+                                <Text style={styles.qrBenchText}>{equipamentoQr.bancada_sala}</Text>
+                            </View>
+                        )}
+
+                        <TouchableOpacity
+                            style={[globalStyles.primaryBtn, { width: '100%', marginTop: 18 }]}
+                            onPress={() => setQrModalVisible(false)}
+                        >
+                            <Ionicons name="checkmark-circle-outline" size={20} color={COLORS.bg} />
+                            <Text style={globalStyles.primaryBtnText}>Fechar Etiqueta</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
         </View>
     );
 }
@@ -763,5 +815,52 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.bg,
         borderWidth: 1,
         borderColor: COLORS.border,
+    },
+    qrModalBackdrop: {
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.8)',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 24,
+    },
+    qrModalCard: {
+        width: '100%',
+        backgroundColor: COLORS.card,
+        borderRadius: 20,
+        padding: 22,
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: COLORS.border,
+    },
+    qrSubtitle: {
+        color: COLORS.textSub,
+        fontSize: 12,
+        marginBottom: 16,
+    },
+    qrWhiteBox: {
+        backgroundColor: '#FFFFFF',
+        padding: 20,
+        borderRadius: 16,
+        alignItems: 'center',
+        width: '100%',
+    },
+    qrTagCode: {
+        color: '#0F172A',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginTop: 12,
+        letterSpacing: 1,
+    },
+    qrEquipName: {
+        color: '#334155',
+        fontSize: 13,
+        fontWeight: '600',
+        marginTop: 4,
+        textAlign: 'center',
+    },
+    qrBenchText: {
+        color: '#64748B',
+        fontSize: 11,
+        marginTop: 2,
     },
 });

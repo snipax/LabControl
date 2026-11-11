@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\projetos\\labcontrol-mobile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\services\\hardwareService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\hardwareService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\HistoryScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\HistoryScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\screens\\EquipmentScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\services\\hardwareService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\hardwareService.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\database\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\projetos\\labcontrol-mobile\\src\\screens\\UsersScreen.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "hardwareService.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\services\\hardwareService.js",
               "RelativeDocumentMoniker": "src\\services\\hardwareService.js",
@@ -91,8 +91,7 @@
               "RelativeToolTip": "src\\screens\\UsersScreen.js",
               "ViewState": "AgIAAEMBAAAAAAAAAAAqwJIBAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-09T06:05:39.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T06:05:39.037Z"
             },
             {
               "$type": "Document",
@@ -108,26 +107,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HistoryScreen.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\HistoryScreen.js",
               "RelativeDocumentMoniker": "src\\screens\\HistoryScreen.js",
               "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\screens\\HistoryScreen.js",
               "RelativeToolTip": "src\\screens\\HistoryScreen.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-11-03T07:51:26.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EquipmentScreen.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js",
               "RelativeDocumentMoniker": "src\\screens\\EquipmentScreen.js",
               "ToolTip": "C:\\projetos\\labcontrol-mobile\\src\\screens\\EquipmentScreen.js",
               "RelativeToolTip": "src\\screens\\EquipmentScreen.js",
-              "ViewState": "AgIAAN8CAAAAAAAAAAAuwP4CAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAF4DAAAAAAAAAAAYwGEDAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-11-03T07:33:53.743Z",
               "EditorCaption": ""
@@ -170,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "database.js",
               "DocumentMoniker": "C:\\projetos\\labcontrol-mobile\\src\\database\\database.js",
               "RelativeDocumentMoniker": "src\\database\\database.js",
@@ -178,8 +177,7 @@
               "RelativeToolTip": "src\\database\\database.js",
               "ViewState": "AgIAAFkBAAAAAAAAAAAuwGYBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-11-03T06:52:56.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-03T06:52:56.391Z"
             },
             {
               "$type": "Document",

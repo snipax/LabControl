@@ -27,7 +27,8 @@
         {
           "cameraPermission": "Permitir que o LabControl acesse a câmera para ler etiquetas QR Code."
         }
-      ]
+      ],
+      "expo-sharing"
     ]
   }
 }
